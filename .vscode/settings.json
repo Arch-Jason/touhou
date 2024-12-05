@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "compare": "c",
+        "playerposition.h": "c",
+        "main.h": "c",
+        "player.h": "c",
+        "song1.h": "c",
+        "enemybullets.h": "c",
+        "time.h": "c"
+    }
+}

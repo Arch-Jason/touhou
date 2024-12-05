@@ -1,0 +1,5 @@
+/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/CMakeFiles/touhou.dir
+/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/CMakeFiles/edit_cache.dir
+/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/CMakeFiles/rebuild_cache.dir
+/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
