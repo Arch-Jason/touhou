@@ -7,6 +7,7 @@ extern bool renderFlag;
 
 void updatePlayerPosition(void *argument) {
     while(1) {
+        // HAL_UART_Transmit(&huart2, (uint8_t*)"P\r\n", 14, HAL_MAX_DELAY);
         renderFlag = false;
         int8_t velocityX, velocityY;
 

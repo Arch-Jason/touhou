@@ -55,10 +55,9 @@ void updateBullets() {
 
 void enemyBullets(void *argument) {
     renderFlag = false;
-    HAL_UART_Transmit(&huart2, (uint8_t*)"1 complete\r\n", 14, HAL_MAX_DELAY);
     initBullets();
-    HAL_UART_Transmit(&huart2, (uint8_t*)"2 complete\r\n", 14, HAL_MAX_DELAY);
     while(1) {
+        // HAL_UART_Transmit(&huart2, (uint8_t*)"B\r\n", 14, HAL_MAX_DELAY);
         renderFlag = false;
         generateBullets();
         updateBullets();

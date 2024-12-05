@@ -25,7 +25,6 @@
 #include "stdint.h"
 #include "song1.h"
 #include "display.h"
-#include "frames.h"
 #include "playerPosition.h"
 #include "enemyBullets.h"
 #include "collision.h"
@@ -160,10 +159,11 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  osThreadNew(render, NULL, NULL);
   osThreadNew(updatePlayerPosition, NULL, NULL);
   osThreadNew(enemyBullets, NULL,NULL);
   osThreadNew(startADCConversion, NULL, NULL);
+  osThreadNew(playSong1, NULL, NULL);
+  osThreadNew(render, NULL, NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */

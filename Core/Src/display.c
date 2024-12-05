@@ -227,3 +227,30 @@ void LCDDisplayImage(const uint16_t *image, uint16_t width, uint16_t height) {
         HAL_SPI_Transmit_DMA(&hspi1, buffer, dataSize);
     }
 }
+
+
+void LCDDisplayRegion(const uint16_t *image, uint16_t startX, uint16_t startY, uint16_t width, uint16_t height) {
+    uint8_t buffer[SPI_MAX_TRANSFER_SIZE];
+
+    // Setting the window once is sufficient before starting the transfer
+    LCDSetWindow(startX, startY, width, height);
+    HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, 1);
+
+    uint32_t totalPixels = width * height;
+    uint32_t totalBytes = totalPixels * 2; // Each pixel is represented by 2 bytes
+
+    for (uint32_t i = 0; i < totalPixels;) {
+        uint32_t remainingBytes = (totalBytes - i * 2);
+        uint32_t dataSize = remainingBytes > SPI_MAX_TRANSFER_SIZE ? SPI_MAX_TRANSFER_SIZE : remainingBytes;
+        
+        uint32_t numPixels = dataSize / 2; // Each pixel is 2 bytes
+        for (uint32_t j = 0; j < numPixels; j++) {
+            buffer[2 * j] = (image[i + j] >> 8) & 0xFF;
+            buffer[2 * j + 1] = image[i + j] & 0xFF;
+        }
+
+        i += numPixels; // Move the index forward by the number of pixels processed
+        while (HAL_SPI_GetState(&hspi1) == HAL_SPI_STATE_BUSY_TX) {}
+        HAL_SPI_Transmit_DMA(&hspi1, buffer, dataSize);
+    }
+}
