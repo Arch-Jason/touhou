@@ -88,9 +88,13 @@ void StartDefaultTask(void *argument);
 /* USER CODE BEGIN 0 */
 uint16_t adcBuff[2];
 static void startADCConversion(void *argument);
+static void jsCalibration(void *argument);
 uint16_t playerPosition[2] = {120, 280};
 struct enemyBullet bullets[50];
 SemaphoreHandle_t renderFlag;
+uint16_t js_x0;
+uint16_t js_y0;
+
 /* USER CODE END 0 */
 
 /**
@@ -132,7 +136,6 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
   LCDInit();
-  HAL_ADC_Start(&hadc1);
   renderFlag = xSemaphoreCreateMutex();
   
   /* USER CODE END 2 */
@@ -162,10 +165,12 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  osThreadNew(startADCConversion, NULL, NULL);
+  osThreadNew(jsCalibration, NULL, NULL);
+  osThreadNew(playSong1, NULL, NULL);
   osThreadNew(updatePlayerPosition, NULL, NULL);
   osThreadNew(enemyBullets, NULL,NULL);
-  osThreadNew(startADCConversion, NULL, NULL);
-  osThreadNew(playSong1, NULL, NULL);
+  osThreadNew(collisionDetect, NULL, NULL);
   osThreadNew(render, NULL, NULL);
   /* USER CODE END RTOS_THREADS */
 
@@ -225,7 +230,7 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
@@ -485,6 +490,12 @@ void startADCConversion(void *argument) {
     HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcBuff, 2);
     osDelay(1);
   }
+}
+
+void jsCalibration(void *argument) {
+  js_x0 = adcBuff[0];
+  js_y0 = adcBuff[1];
+  while(1);
 }
 
 /* USER CODE END 4 */

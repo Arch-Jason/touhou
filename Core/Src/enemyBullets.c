@@ -25,12 +25,13 @@ void initBullets() {
 void generateBullets() {
     for (uint16_t i = 0; i < 50; i++) {
         if (bullets[i].type == 0) {
-            float randNum = rand() / RAND_MAX;
-            if (randNum < 0.7) { //随机弹幕
+            uint8_t randNum = rand() % 10;
+            if (randNum <= 6) { //随机弹幕
                 bullets[i].velocity_x = (rand() % 10) - 5;
                 bullets[i].velocity_y = (rand() % 10);
                 bullets[i].type = 1;
-            } else { //自狙击
+            }
+            if (randNum > 6) { //自狙击
                 int16_t delta_x = playerPosition[0] - bullets[i].x;
                 int16_t delta_y = playerPosition[1] - bullets[i].y;
                 float magnitude = sqrt(delta_x * delta_x + delta_y * delta_y);
@@ -60,7 +61,7 @@ void enemyBullets(void *argument) {
     initBullets();
     while(1) {
         if (xSemaphoreTake(renderFlag, (TickType_t)10) == pdTRUE) {
-            HAL_UART_Transmit(&huart2, (uint8_t*)"B\r\n", 14, HAL_MAX_DELAY);
+            // HAL_UART_Transmit(&huart2, (uint8_t*)"B\r\n", 14, HAL_MAX_DELAY);
             generateBullets();
             updateBullets();
             xSemaphoreGive(renderFlag);

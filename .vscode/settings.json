@@ -8,6 +8,7 @@
         "enemybullets.h": "c",
         "time.h": "c",
         "semphr.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "collision.h": "c"
     }
 }

@@ -10,6 +10,7 @@
 extern uint16_t playerPosition[2];
 extern uint16_t adcBuff[2];
 extern SemaphoreHandle_t renderFlag;
+extern uint16_t js_x0, js_y0;
 
 void updatePlayerPosition(void *argument);
 
