@@ -27,16 +27,16 @@ void generateBullets() {
         if (bullets[i].type == 0) {
             uint8_t randNum = rand() % 10;
             if (randNum <= 6) { //随机弹幕
-                bullets[i].velocity_x = (rand() % 6) - 3;
-                bullets[i].velocity_y = (rand() % 6);
+                bullets[i].velocity_x = (rand() % 20) - 10;
+                bullets[i].velocity_y = (rand() % 20);
                 bullets[i].type = 1;
             }
             if (randNum > 6) { //自狙击
                 int16_t delta_x = playerPosition[0] - bullets[i].x;
                 int16_t delta_y = playerPosition[1] - bullets[i].y;
                 float magnitude = sqrt(delta_x * delta_x + delta_y * delta_y);
-                bullets[i].velocity_x = (delta_x / magnitude) * 2;
-                bullets[i].velocity_y = (delta_y / magnitude) * 2;
+                bullets[i].velocity_x = (delta_x / magnitude) * 5;
+                bullets[i].velocity_y = (delta_y / magnitude) * 5;
                 bullets[i].type = 2;
             }
         }
@@ -65,7 +65,7 @@ void enemyBullets(void *argument) {
             generateBullets();
             updateBullets();
             xSemaphoreGive(renderFlag);
-            osDelay(5);
+            osDelay(50);
         }
     }
 }
