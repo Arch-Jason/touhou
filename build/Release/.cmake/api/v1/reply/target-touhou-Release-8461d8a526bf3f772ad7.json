@@ -32,7 +32,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 68,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -147,7 +147,14 @@
 				35,
 				36,
 				37,
-				38
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45
 			]
 		},
 		{
@@ -206,7 +213,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				39
+				46
 			]
 		}
 	],
@@ -277,14 +284,21 @@
 				35,
 				36,
 				37,
-				38
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				39
+				46
 			]
 		}
 	],
@@ -312,6 +326,30 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/frames.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/playerPosition.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/enemyBullets.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/collision.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/render.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -354,6 +392,24 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c",
 			"sourceGroupIndex" : 0
 		},
 		{

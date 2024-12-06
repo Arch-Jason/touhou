@@ -38,19 +38,19 @@
             }
         },
         {
-            "name": "Configure preset using toolchain file",
+            "name": "ToolchainPreset",
             "displayName": "Configure preset using toolchain file",
             "description": "Sets Ninja generator, build and install directory",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/gcc-arm-none-eabi.cmake",
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
             }
         },
         {
-            "name": "GCC 14.2.0 x86_64-apple-darwin23",
+            "name": "GCC_14_2_0",
             "displayName": "GCC 14.2.0 x86_64-apple-darwin23",
             "description": "Using compilers: C = /usr/local/bin/gcc-14, CXX = /usr/local/bin/g++-14",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
@@ -78,12 +78,6 @@
         {
             "name": "MinSizeRel",
             "configurePreset": "MinSizeRel"
-        },
-        {
-            "name": "Release",
-            "description": "",
-            "displayName": "",
-            "inherits": []
         }
     ]
 }
