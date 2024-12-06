@@ -7,7 +7,7 @@
 #include "semphr.h"
 #include "math.h"
 
-extern struct enemyBullet bullets[50];
+extern struct enemyBullet bullets[10];
 extern uint16_t playerPosition[2];
 
 extern UART_HandleTypeDef huart2;
@@ -15,7 +15,7 @@ extern SemaphoreHandle_t renderFlag;
 
 void initBullets() {
     srand(12345);
-    for (uint16_t i = 0; i < 50; i++) {
+    for (uint16_t i = 0; i < 10; i++) {
         bullets[i].type = 0;
         bullets[i].x = rand() % 240;
         bullets[i].y = 0;
@@ -23,20 +23,20 @@ void initBullets() {
 }
 
 void generateBullets() {
-    for (uint16_t i = 0; i < 50; i++) {
+    for (uint16_t i = 0; i < 10; i++) {
         if (bullets[i].type == 0) {
             uint8_t randNum = rand() % 10;
             if (randNum <= 6) { //随机弹幕
-                bullets[i].velocity_x = (rand() % 10) - 5;
-                bullets[i].velocity_y = (rand() % 10);
+                bullets[i].velocity_x = (rand() % 6) - 3;
+                bullets[i].velocity_y = (rand() % 6);
                 bullets[i].type = 1;
             }
             if (randNum > 6) { //自狙击
                 int16_t delta_x = playerPosition[0] - bullets[i].x;
                 int16_t delta_y = playerPosition[1] - bullets[i].y;
                 float magnitude = sqrt(delta_x * delta_x + delta_y * delta_y);
-                bullets[i].velocity_x = (delta_x / magnitude) * 5; // 固定速度为 10
-                bullets[i].velocity_y = (delta_y / magnitude) * 5;
+                bullets[i].velocity_x = (delta_x / magnitude) * 2;
+                bullets[i].velocity_y = (delta_y / magnitude) * 2;
                 bullets[i].type = 2;
             }
         }
@@ -44,7 +44,7 @@ void generateBullets() {
 }
 
 void updateBullets() {
-    for (uint16_t i = 0; i < 50; i++) {
+    for (uint16_t i = 0; i < 10; i++) {
         if (bullets[i].type != 0) {
             bullets[i].x += bullets[i].velocity_x;
             bullets[i].y += bullets[i].velocity_y;

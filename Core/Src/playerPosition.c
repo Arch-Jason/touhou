@@ -12,10 +12,10 @@ void updatePlayerPosition(void *argument) {
     while(1) {
         if (xSemaphoreTake(renderFlag, (TickType_t)10) == pdTRUE) {
             // HAL_UART_Transmit(&huart2, (uint8_t*)"P\r\n", 14, HAL_MAX_DELAY);
-            int8_t velocityX, velocityY;
+            int16_t velocityX, velocityY;
 
-            velocityX = (adcBuff[0]-(js_x0))/500;
-            velocityY = (adcBuff[1]-(js_y0))/500;
+            velocityX = ((int16_t)adcBuff[0]-(int16_t)(js_x0))/500;
+            velocityY = 2*((int16_t)adcBuff[1]-(int16_t)(js_y0))/500;
             int16_t tmp_x, tmp_y;
             tmp_x = playerPosition[0] += velocityX;
             tmp_y = playerPosition[1] += velocityY;
@@ -33,7 +33,7 @@ void updatePlayerPosition(void *argument) {
             playerPosition[1] = tmp_y;
             
             xSemaphoreGive(renderFlag);
-            osDelay(1);
+            osDelay(20);
         }
     }
 }

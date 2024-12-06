@@ -90,7 +90,7 @@ uint16_t adcBuff[2];
 static void startADCConversion(void *argument);
 static void jsCalibration(void *argument);
 uint16_t playerPosition[2] = {120, 280};
-struct enemyBullet bullets[50];
+struct enemyBullet bullets[10];
 SemaphoreHandle_t renderFlag;
 uint16_t js_x0;
 uint16_t js_y0;
@@ -136,6 +136,9 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
   LCDInit();
+  LCDDisplayImage(framebuffer[0], 240, 320);
+  HAL_Delay(3000);
+  LCDClear(0xFFFF);
   renderFlag = xSemaphoreCreateMutex();
   
   /* USER CODE END 2 */
