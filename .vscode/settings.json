@@ -6,6 +6,8 @@
         "player.h": "c",
         "song1.h": "c",
         "enemybullets.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "semphr.h": "c",
+        "stdbool.h": "c"
     }
 }

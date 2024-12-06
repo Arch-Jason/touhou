@@ -29,6 +29,8 @@
 #include "enemyBullets.h"
 #include "collision.h"
 #include "render.h"
+#include <semphr.h>
+#include "frames.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -87,8 +89,8 @@ void StartDefaultTask(void *argument);
 uint16_t adcBuff[2];
 static void startADCConversion(void *argument);
 uint16_t playerPosition[2] = {120, 280};
-struct enemyBullet bullets[500];
-bool renderFlag = true;
+struct enemyBullet bullets[50];
+SemaphoreHandle_t renderFlag;
 /* USER CODE END 0 */
 
 /**
@@ -131,6 +133,7 @@ int main(void)
 
   LCDInit();
   HAL_ADC_Start(&hadc1);
+  renderFlag = xSemaphoreCreateMutex();
   
   /* USER CODE END 2 */
 

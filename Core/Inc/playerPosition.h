@@ -4,10 +4,12 @@
 #include "main.h"
 #include "stdint.h"
 #include "stdbool.h"
+#include "FreeRTOS.h"
+#include "semphr.h"
 
 extern uint16_t playerPosition[2];
 extern uint16_t adcBuff[2];
-extern bool renderFlag;
+extern SemaphoreHandle_t renderFlag;
 
 void updatePlayerPosition(void *argument);
 
