@@ -71,3 +71,9 @@
 4	204	1733474063844295918	CMakeFiles/touhou.dir/Core/Src/enemyBullets.c.obj	3da38f9efc6361f1
 5	210	1733474063849852250	CMakeFiles/touhou.dir/Core/Src/main.c.obj	3f8a1dbcce46ef28
 210	411	1733474064049721370	touhou.elf	fd547cf30b4c25e8
+4	162	1733477519291639305	CMakeFiles/touhou.dir/Core/Src/playerPosition.c.obj	548c261cd94d50b5
+162	362	1733477519487631863	touhou.elf	fd547cf30b4c25e8
+3	157	1733477591990144065	CMakeFiles/touhou.dir/Core/Src/playerPosition.c.obj	548c261cd94d50b5
+157	370	1733477592200670630	touhou.elf	fd547cf30b4c25e8
+3	158	1733477790067010884	CMakeFiles/touhou.dir/Core/Src/playerPosition.c.obj	548c261cd94d50b5
+159	354	1733477790260103869	touhou.elf	fd547cf30b4c25e8

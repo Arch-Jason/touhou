@@ -15,7 +15,7 @@ void updatePlayerPosition(void *argument) {
             int16_t velocityX, velocityY;
 
             velocityX = ((int16_t)adcBuff[0]-(int16_t)(js_x0))/500;
-            velocityY = 2*((int16_t)adcBuff[1]-(int16_t)(js_y0))/500;
+            velocityY = 3*((int16_t)adcBuff[1]-(int16_t)(js_y0))/500;
             int16_t tmp_x, tmp_y;
             tmp_x = playerPosition[0] += velocityX;
             tmp_y = playerPosition[1] += velocityY;
