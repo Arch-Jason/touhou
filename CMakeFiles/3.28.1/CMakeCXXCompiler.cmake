@@ -23,9 +23,9 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 set(CMAKE_AR "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-ar")
-set(CMAKE_CXX_COMPILER_AR "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ar")
+set(CMAKE_CXX_COMPILER_AR "/usr/bin/arm-none-eabi-gcc-ar")
 set(CMAKE_RANLIB "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/usr/bin/arm-none-eabi-gcc-ranlib")
 set(CMAKE_LINKER "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")

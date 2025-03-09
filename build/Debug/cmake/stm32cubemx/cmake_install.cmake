@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx
+# Install script for directory: /home/jason/Documents/stm32/touhou/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

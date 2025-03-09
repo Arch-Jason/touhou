@@ -67,35 +67,35 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -179,35 +179,35 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",

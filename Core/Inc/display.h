@@ -4,6 +4,8 @@
 #include "main.h"
 #include "stdint.h"
 #include "stdbool.h"
+#include "stdbool.h"
+
 
 extern SPI_HandleTypeDef hspi1;
 extern volatile bool spiTransferComplete;
@@ -17,6 +19,6 @@ void LCDClear(uint16_t Color);
 void LCDClearWindow(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t color);
 void LCDDrawPaint(uint16_t x, uint16_t y, uint16_t Color);
 void LCDDisplayImage(const uint16_t *image, uint16_t width, uint16_t height);
-void LCDDisplayRegion(const uint16_t *image, uint16_t startX, uint16_t startY, uint16_t width, uint16_t height);
+void LCDDisplayRegion(const uint16_t *image, uint16_t startX, uint16_t startY, uint16_t Xend, uint16_t Yend);
 
 #endif /* DISPLAY_H */

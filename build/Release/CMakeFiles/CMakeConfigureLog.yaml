@@ -18,7 +18,7 @@ events:
       - "CMakeLists.txt:31 (enable_language)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-      Compiler: /opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc 
+      Compiler: /usr/bin/arm-none-eabi-gcc 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0
       Id flags:  
       
@@ -48,7 +48,7 @@ events:
       - "CMakeLists.txt:31 (enable_language)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc 
+      Compiler: /usr/bin/arm-none-eabi-gcc 
       Build flags: -mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-Os;-g0
       Id flags: -c 
       
@@ -59,7 +59,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        /Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o
+        /home/jason/Documents/stm32/touhou/build/Release/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "message-v1"
@@ -124,6 +124,6 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is GNU, found in:
-        /Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.o
+        /home/jason/Documents/stm32/touhou/build/Release/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.o
       
 ...

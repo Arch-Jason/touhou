@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jason/STM32CubeIDE/workspace_1.16.0/touhou
+# Install script for directory: /home/jason/Documents/stm32/touhou
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
+  include("/home/jason/Documents/stm32/touhou/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jason/Documents/stm32/touhou/build/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

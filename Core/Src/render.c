@@ -10,7 +10,6 @@
 extern struct enemyBullet bullets[10];
 extern uint16_t playerPosition[2];
 extern SemaphoreHandle_t renderFlag;
-extern UART_HandleTypeDef huart2;
 
 // 辅助函数：限制值范围
 static inline int16_t constrain(int16_t value, int16_t min, int16_t max) {

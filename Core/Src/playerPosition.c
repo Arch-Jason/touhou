@@ -4,7 +4,6 @@
 
 extern uint16_t playerPosition[2];
 extern uint16_t adcBuff[2];
-extern UART_HandleTypeDef huart2;
 extern SemaphoreHandle_t renderFlag;
 extern uint16_t js_x0, js_y0;
 
@@ -15,7 +14,7 @@ void updatePlayerPosition(void *argument) {
             int16_t velocityX, velocityY;
 
             velocityX = ((int16_t)adcBuff[0]-(int16_t)(js_x0))/500;
-            velocityY = 3*((int16_t)adcBuff[1]-(int16_t)(js_y0))/500;
+            velocityY = 3*((int16_t)adcBuff[1]-(int16_t)(js_y0))/1000;
             int16_t tmp_x, tmp_y;
             tmp_x = playerPosition[0] += velocityX;
             tmp_y = playerPosition[1] += velocityY;

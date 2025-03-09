@@ -48,7 +48,6 @@ target_sources(stm32cubemx INTERFACE
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
-    ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
     ../../Core/Src/system_stm32f4xx.c
     ../../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
     ../../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c

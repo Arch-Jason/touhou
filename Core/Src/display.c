@@ -6,14 +6,12 @@
 #define LCD_WIDTH 240
 #define LCD_HEIGHT 320
 
-#define SPI_MAX_TRANSFER_SIZE 256
+#define SPI_MAX_TRANSFER_SIZE 128
 
 extern SPI_HandleTypeDef hspi1;
 
 void LCDReset() {
-    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, 1);
     HAL_Delay(200);
-    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, 0);
     HAL_Delay(200);
     HAL_GPIO_WritePin(RST_GPIO_Port, RST_Pin, 0);
     HAL_Delay(200);
@@ -24,18 +22,15 @@ void LCDReset() {
 void LCDWriteCommand(uint16_t command) {
     while (HAL_SPI_GetState(&hspi1) == HAL_SPI_STATE_BUSY_TX) {}
     
-    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, 0);
     HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, 0);
-    HAL_SPI_Transmit(&hspi1, (uint8_t*)&command, 1, HAL_MAX_DELAY);
+    HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)&command, 1);
 }
 
 void LCDWriteData(uint16_t data) {
     while (HAL_SPI_GetState(&hspi1) == HAL_SPI_STATE_BUSY_TX) {}
     
-    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, 0);
     HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, 1);
-    HAL_SPI_Transmit(&hspi1, (uint8_t*)&data, 1, HAL_MAX_DELAY);
-	HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, 1);
+    HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)&data, 1);
 }
 
 void LCDInit() {
@@ -188,13 +183,18 @@ void LCDClearWindow(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Ye
     LCDSetWindow(Xstart, Ystart, Xend-1, Yend-1);
     uint8_t highByte = (color >> 8) & 0xFF;
     uint8_t lowByte = color & 0xFF;
+
+    uint32_t size = (Xend-Xstart) * (Yend-Ystart);
+    uint8_t buffer[size * 2];
     
-    for (i = Ystart; i < Yend; i++) {
-        for (j = Xstart; j < Xend; j++) {
-            LCDWriteData(highByte);
-            LCDWriteData(lowByte);
-        }
-    } 
+    for (uint16_t i = 0; i < size; i++) {
+        buffer[2 * i] = lowByte;
+        buffer[2 * i + 1] = highByte;
+    }
+
+    HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, 1);
+    while (HAL_SPI_GetState(&hspi1) == HAL_SPI_STATE_BUSY_TX) {}
+    HAL_SPI_Transmit_DMA(&hspi1, buffer, size * 2);
 }
 
 void LCDDrawPaint(uint16_t x, uint16_t y, uint16_t Color) {
@@ -229,11 +229,13 @@ void LCDDisplayImage(const uint16_t *image, uint16_t width, uint16_t height) {
 }
 
 
-void LCDDisplayRegion(const uint16_t *image, uint16_t startX, uint16_t startY, uint16_t width, uint16_t height) {
+void LCDDisplayRegion(const uint16_t *image, uint16_t startX, uint16_t startY, uint16_t Xend, uint16_t Yend) {
     uint8_t buffer[SPI_MAX_TRANSFER_SIZE];
 
     // Setting the window once is sufficient before starting the transfer
-    LCDSetWindow(startX, startY, width, height);
+    LCDSetWindow(startX, startY, Xend, Yend);
+    uint32_t width = Xend - startX;
+    uint32_t height = Yend - startY;
     HAL_GPIO_WritePin(DC_GPIO_Port, DC_Pin, 1);
 
     uint32_t totalPixels = width * height;

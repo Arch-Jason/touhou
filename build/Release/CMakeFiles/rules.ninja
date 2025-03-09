@@ -17,7 +17,7 @@
 rule ASM_COMPILER__touhou_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}/usr/bin/arm-none-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -27,7 +27,7 @@ rule ASM_COMPILER__touhou_unscanned_Release
 rule C_COMPILER__touhou_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}/usr/bin/arm-none-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -35,7 +35,7 @@ rule C_COMPILER__touhou_unscanned_Release
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__touhou_Release
-  command = $PRE_LINK && /opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/stm32f401retx_flash.ld" --specs=nano.specs -Wl,-Map=touhou.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = $PRE_LINK && /usr/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/jason/Documents/stm32/touhou/stm32f401retx_flash.ld" --specs=nano.specs -Wl,-Map=touhou.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -52,7 +52,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/ST/STM32CubeCLT_1.17.0/CMake/bin/cmake --regenerate-during-build -S/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou -B/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release
+  command = /opt/ST/STM32CubeCLT_1.17.0/CMake/bin/cmake --regenerate-during-build -S/home/jason/Documents/stm32/touhou -B/home/jason/Documents/stm32/touhou/build/Release
   description = Re-running CMake...
   generator = 1
 
@@ -61,7 +61,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /opt/ST/STM32CubeCLT_1.17.0/Ninja/bin/ninja $FILE_ARG -t clean $TARGETS
+  command = /usr/bin/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -69,6 +69,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /opt/ST/STM32CubeCLT_1.17.0/Ninja/bin/ninja -t targets
+  command = /usr/bin/ninja -t targets
   description = All primary targets available:
 

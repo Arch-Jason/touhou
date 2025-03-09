@@ -76,8 +76,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Release",
-		"source" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou"
+		"build" : "/home/jason/Documents/stm32/touhou/build/Release",
+		"source" : "/home/jason/Documents/stm32/touhou"
 	},
 	"version" : 
 	{

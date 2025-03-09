@@ -66,7 +66,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "touhou::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-touhou-Debug-8cae6da69a236a092d6c.json",
+					"jsonFile" : "target-touhou-Debug-f52a833b471d56aa3785.json",
 					"name" : "touhou",
 					"projectIndex" : 0
 				}
@@ -76,8 +76,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug",
-		"source" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou"
+		"build" : "/home/jason/Documents/stm32/touhou/build/Debug",
+		"source" : "/home/jason/Documents/stm32/touhou"
 	},
 	"version" : 
 	{

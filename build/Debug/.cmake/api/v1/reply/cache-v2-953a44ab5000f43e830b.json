@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug"
+			"value" : "/home/jason/Documents/stm32/touhou/build/Debug"
 		},
 		{
 			"name" : "1602_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou"
+			"value" : "/home/jason/Documents/stm32/touhou"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ar"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ar"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_RANLIB",
@@ -99,7 +99,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ranlib"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ranlib"
 		},
 		{
 			"name" : "CMAKE_ASM_COMPILER_WORKS",
@@ -215,7 +215,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug"
+			"value" : "/home/jason/Documents/stm32/touhou/build/Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -263,7 +263,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/CMake/bin/cmake"
+			"value" : "/opt/st/stm32cubeclt_1.17.0/CMake/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -275,7 +275,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/CMake/bin/cpack"
+			"value" : "/opt/st/stm32cubeclt_1.17.0/CMake/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -287,7 +287,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/CMake/bin/ctest"
+			"value" : "/opt/st/stm32cubeclt_1.17.0/CMake/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -303,7 +303,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ar"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ar"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -319,7 +319,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ranlib"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ranlib"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ar"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ar"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc-ranlib"
+			"value" : "/usr/bin/arm-none-eabi-gcc-ranlib"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -634,6 +634,22 @@
 			"value" : ""
 		},
 		{
+			"name" : "CMAKE_EXPORT_BUILD_DATABASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable output of build database during the build."
+				}
+			],
+			"type" : "BOOL",
+			"value" : ""
+		},
+		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
 			"properties" : 
 			[
@@ -655,7 +671,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/jason/Documents/stm32/touhou/build/Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -715,7 +731,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou"
+			"value" : "/home/jason/Documents/stm32/touhou"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -743,7 +759,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/Ninja/bin/ninja"
+			"value" : "/usr/bin/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -959,7 +975,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/opt/ST/STM32CubeCLT_1.17.0/CMake/share/cmake-3.28"
+			"value" : "/opt/st/stm32cubeclt_1.17.0/CMake/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1195,7 +1211,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/gcc-arm-none-eabi.cmake"
+			"value" : "/home/jason/Documents/stm32/touhou/cmake/gcc-arm-none-eabi.cmake"
 		},
 		{
 			"name" : "CMAKE_UNAME",
@@ -1235,7 +1251,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug/cmake/stm32cubemx"
+			"value" : "/home/jason/Documents/stm32/touhou/build/Debug/cmake/stm32cubemx"
 		},
 		{
 			"name" : "stm32cubemx_IS_TOP_LEVEL",
@@ -1259,7 +1275,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/cmake/stm32cubemx"
+			"value" : "/home/jason/Documents/stm32/touhou/cmake/stm32cubemx"
 		},
 		{
 			"name" : "touhou_BINARY_DIR",
@@ -1271,7 +1287,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou/build/Debug"
+			"value" : "/home/jason/Documents/stm32/touhou/build/Debug"
 		},
 		{
 			"name" : "touhou_IS_TOP_LEVEL",
@@ -1295,7 +1311,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/jason/STM32CubeIDE/workspace_1.16.0/touhou"
+			"value" : "/home/jason/Documents/stm32/touhou"
 		}
 	],
 	"kind" : "cache",

@@ -10,7 +10,6 @@
 extern struct enemyBullet bullets[10];
 extern uint16_t playerPosition[2];
 
-extern UART_HandleTypeDef huart2;
 extern SemaphoreHandle_t renderFlag;
 
 void initBullets() {
@@ -65,7 +64,7 @@ void enemyBullets(void *argument) {
             generateBullets();
             updateBullets();
             xSemaphoreGive(renderFlag);
-            osDelay(50);
+            osDelay(100);
         }
     }
 }
